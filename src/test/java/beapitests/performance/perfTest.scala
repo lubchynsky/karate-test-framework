@@ -7,11 +7,15 @@ class PerfTest extends Simulation {
   // Protocol
   val protocol = karateProtocol();
 
+  // Read test data from CSV file
+  val csvFeeder = csv("pets.csv").circular
+
   // 2 - Load scenario
   val listAllPets = scenario("Get all pets")
     .exec(karateFeature("classpath:beapitests/performance/GetAllPets.feature"))
 
   val createAndDeletePet = scenario("Create and delete pet")
+    .feed(csvFeeder)
     .exec(karateFeature("classpath:beapitests/performance/CreateAndDelete.feature"))
 
   // 3 Load simulation

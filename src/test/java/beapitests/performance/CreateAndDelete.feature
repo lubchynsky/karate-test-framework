@@ -3,6 +3,10 @@ Feature: This script will create and delete a pet
   Background:
     * url apiUrl
     * def petRequestBody = read('classpath:newPet.json')
+    # Setup gatling feeder to run tests with diff data
+    * set petRequestBody.name = __gatling.name
+    * set petRequestBody.type = __gatling.type
+    * set petRequestBody.age = __gatling.age
 
   Scenario: delete a pet
     # Create pet
