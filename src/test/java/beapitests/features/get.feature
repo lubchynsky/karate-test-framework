@@ -7,3 +7,4 @@ Feature: This is get requests script
     Given path 'pets'
     When method get
     Then status 200
+    * print response
