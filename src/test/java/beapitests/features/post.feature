@@ -6,7 +6,7 @@ Feature: This script will create a pet
   Scenario: create a pet
     * def pet =
     """
-        {
+    {
         "name": "Rex from karate",
         "type": "DOG",
         "age": 10
@@ -16,3 +16,7 @@ Feature: This script will create a pet
     And request pet
     When method post
     Then status 201
+    * print response
+    And match response.name == pet.name
+    And match response.type == pet.type
+    And match response.age == pet.age

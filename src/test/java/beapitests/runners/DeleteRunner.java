@@ -3,11 +3,11 @@ package beapitests.runners;
 import com.intuit.karate.Runner;
 import org.junit.jupiter.api.Test;
 
-public class PostRunner {
+public class DeleteRunner {
 
     @Test
-    void testPost() {
-        Runner.path("classpath:beapitests/features/post.feature")
+    void testDelete() {
+        Runner.path("classpath:beapitests/features/delete.feature")
                 .parallel(1);
     }
 }
