@@ -1,7 +1,7 @@
 Feature: This script will create a pet
 
   Background:
-    * url 'http://localhost:8080'
+    * url apiUrl
 
   Scenario: create a pet
     * def pet =

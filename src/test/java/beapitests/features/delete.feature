@@ -1,7 +1,7 @@
 Feature: This script will create and delete a pet
 
   Background:
-    * url 'http://localhost:8080'
+    * url apiUrl
 
   Scenario: delete a pet
     * def pet =
