@@ -16,6 +16,7 @@
         <gatling-maven-plugin.version>4.2.9</gatling-maven-plugin.version>
         <scala-maven-plugin.version>4.8.0</scala-maven-plugin.version>
         <gatling.version>3.7.6</gatling.version>
+        <java.faker.version>1.0.2</java.faker.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,11 @@
             <groupId>io.gatling</groupId>
             <artifactId>gatling-core</artifactId>
             <version>${gatling.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${java.faker.version}</version>
         </dependency>
     </dependencies>
 
