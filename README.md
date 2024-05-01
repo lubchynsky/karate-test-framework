@@ -1,4 +1,5 @@
 # karate-test-framework
 
-This framework run api tests on api located https://github.com/lubchynsky/spring-be-api
-Before those tests are executed, app should be up and running
+This framework runs api tests on be spring based api located at 'https://github.com/lubchynsky/spring-be-api'
+
+This app should be up and running before tests execution
