@@ -7,7 +7,16 @@ Feature: This is get requests script
     Given path 'pets'
     When method get
     Then status 200
-    * print response
+    # Schema validation
+    And match each response ==
+    """
+    {
+        "id": '#number',
+        "name": '#string',
+        "type": '#string',
+        "age": '#number'
+    }
+    """
 
   Scenario: get N pets with query param
     * def limit = 2
