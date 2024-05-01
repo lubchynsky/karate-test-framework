@@ -2,19 +2,12 @@ Feature: This script will create and delete a pet
 
   Background:
     * url apiUrl
+    * def petRequestBody = read('classpath:newPet.json')
 
   Scenario: delete a pet
-    * def pet =
-    """
-    {
-        "name": "Rex from karate",
-        "type": "DOG",
-        "age": 10
-    }
-    """
     # Create pet
     Given path 'pets'
-    And request pet
+    And request petRequestBody
     When method post
     Then status 201
     * def id = response.id
