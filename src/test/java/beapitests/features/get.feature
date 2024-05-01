@@ -29,3 +29,5 @@ Feature: This is get requests script
     And match response == `#[${limit}]`
     # Alternative way
     And assert response.length == limit
+    # Check type
+    And match responseType == 'json'
