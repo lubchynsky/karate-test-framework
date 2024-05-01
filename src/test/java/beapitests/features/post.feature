@@ -17,6 +17,7 @@ Feature: This script will create a pet
     When method post
     Then status 201
     * print response
+    # Assert response
     And match response.name == pet.name
     And match response.type == pet.type
     And match response.age == pet.age
